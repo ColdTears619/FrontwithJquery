@@ -1,0 +1,46 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dynamic Table with jQuery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Add your custom CSS file if needed -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <div class="form-row">
+      <div class="col-md-3">
+        <label for="nameInput">Name:</label>
+        <input type="text" class="form-control" id="nameInput">
+      </div>
+      <div class="col-md-3">
+        <label for="emailInput">Email:</label>
+        <input type="text" class="form-control" id="emailInput">
+      </div>
+      <div class="col-md-2">
+        <button id="insertBtn" class="btn btn-primary mt-4">Insert Data</button>
+      </div>
+    </div>
+
+    <table class="table mt-4" id="dataTable">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be dynamically added using jQuery -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
