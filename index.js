@@ -11,7 +11,7 @@ $(document).ready(function () {
         contentType: 'application/json',
         data: JSON.stringify({ name: name, email: email }),
         success: function (response) {
-          
+
           var newRow = '<tr>' +
             '<td>' + response.name + '</td>' +
             '<td>' + response.email + '</td>' +
@@ -67,23 +67,6 @@ $(document).ready(function () {
       }
     });
   }
-
-  // Function to update the table with fetched data
-  function updateTable(data) {
-    var tbody = $('#dataTable tbody');
-    tbody.empty();
-
-    $.each(data, function (index, record) {
-      var row = '<tr>' +
-        '<td>' + record.name + '</td>' +
-        '<td>' + record.email + '</td>' +
-        '<td><button class="btn btn-danger deleteBtn">Delete</button></td>' +
-        '</tr>';
-
-      tbody.append(row);
-    });
-  }
-
   // Load data on page load
   loadData();
 });
